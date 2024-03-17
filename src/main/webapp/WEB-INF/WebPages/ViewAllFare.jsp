@@ -26,8 +26,8 @@
         width: 100%;
         border-collapse: collapse;
         margin-top: 20px;
-        border-radius: 10px; /* Rounded border */
-        overflow: hidden; /* Ensures the border radius is applied properly */
+        border-radius: 10px; 
+        overflow: hidden; 
     }
     th, td {
         padding: 10px;
@@ -35,8 +35,8 @@
         text-align: left;
     }
     th {
-        background-color:  #f5f2c5; /* Table head background color */
-        color: black; /* Table head text color */
+        background-color:  #f5f2c5; 
+        color: black; 
     }
     a.button {
         display: block;
@@ -52,22 +52,22 @@
     
      .delete-button, .edit-button {
         display: inline-block;
-        padding: 5px 10px; /* Adjust padding for size */
-        margin: 0 5px; /* Add some margin for spacing */
+        padding: 5px 10px; 
+        margin: 0 5px; 
         border-radius: 5px;
         text-decoration: none;
-        font-size: 12px; /* Adjust font size for small size */
+        font-size: 12px; 
     }
     .delete-button {
-        background-color: #dc3545; /* Danger button color */
+        background-color: #dc3545;
         color: white;
     }
     .edit-button {
-        background-color: #28a745; /* Success button color */
+        background-color: #28a745; 
         color: white;
     }
     .delete-button:hover, .edit-button:hover {
-        opacity: 0.8; /* Add hover effect */
+        opacity: 0.8; 
     }
     a.button:hover {
         background-color: #0056b3;

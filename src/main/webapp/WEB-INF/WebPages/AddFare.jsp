@@ -9,19 +9,19 @@
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <style>
     body {
-        background-color: black; /* Set background color */
+        background-color: black; 
     }
     .container {
-        background-color: #ffffff; /* Set background color */
+        background-color: #ffffff; 
         padding: 20px;
         border-radius: 5px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
-        max-width: 40%; /* Set maximum width */
-        margin: 0 auto; /* Center horizontally */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+        max-width: 40%; 
+        margin: 0 auto; 
     }
     .form-header {
-        color: black; /* Set color of the header */
-        background-color: #f5f2c5; /* Set background color of the header */
+        color: black; 
+        background-color: #f5f2c5;
         padding: 10px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;

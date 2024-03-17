@@ -31,10 +31,10 @@
             margin-bottom: 20px;
         }
         .table-container {
-            margin-top: 20px; /* Adjust the margin as needed */
+            margin-top: 20px; 
         }
         .thead-bg-color {
-            background-color: #f5f2c5; /* Background color for thead */
+            background-color: #f5f2c5; 
         }
     </style>
 </head>

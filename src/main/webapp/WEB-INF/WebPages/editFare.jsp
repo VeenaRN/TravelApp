@@ -9,14 +9,14 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f0f0f0; /* Simplified background color */
-        color: #333; /* Adjusted text color for better readability */
+        background-color: #f0f0f0; 
+        color: #333; 
     }
     .container {
         width: 50%;
         margin: 0 auto;
         padding: 20px;
-        background-color: #fff; /* Solid white background */
+        background-color: #fff; 
         border-radius: 5px;
         margin-top: 20px;
     }
@@ -32,25 +32,25 @@
     }
     input[type="text"],
     input[type="number"] {
-        width: calc(100% - 22px); /* Adjusted width to account for border */
+        width: calc(100% - 22px); 
         padding: 10px;
         margin-bottom: 10px;
-        border: 1px solid #ccc; /* Added border */
+        border: 1px solid #ccc; 
         border-radius: 5px;
     }
     input[type="submit"] {
-        width: 100px; /* Width of the button */
-        margin: 0 auto; /* Centering the button */
+        width: 100px; 
+        margin: 0 auto; 
         display: block;
         padding: 10px;
-        background-color: darkgreen; /* Dark green color */
+        background-color: darkgreen; 
         color: #fff;
         border: none;
         border-radius: 5px;
         cursor: pointer;
     }
     input[type="submit"]:hover {
-        background-color: #006400; /* Dark green color on hover */
+        background-color: #006400; 
     }
 </style>
 </head>
