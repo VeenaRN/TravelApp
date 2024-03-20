@@ -1,6 +1,7 @@
 package coms.TravelApplication.service;
 
 import java.util.List;
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,64 +13,46 @@ import coms.TravelApplication.entities.Vehicles;
 
 @Service
 public class VehicleServiceImpl implements VehicleService {
-	
+
 	@Autowired
 	VehiclesRepository vr;
 
 	@Override
 	public String AddVehicle(Vehicles vehicle) {
-		
-		Vehicles v=vr.save(vehicle);
-		if(v!=null)
+
+		Vehicles v = vr.save(vehicle);
+		if (v != null)
 			return "Success";
 		return "Err";
 	}
 
 	@Override
 	public List<Vehicles> AllVehicle() {
-		List<Vehicles> vehiclelist=vr.findAll();
+		List<Vehicles> vehiclelist = vr.findAll();
 		return vehiclelist;
 	}
-
-	
 
 	@Override
 	public void DeleteVehicle(int vid) {
 		vr.deleteById(vid);
-		
+
 	}
 
 	@Override
 	public Vehicles getVehicleById(int vid) {
-		Optional<Vehicles> optionalVehicle =vr.findById(vid);
-        if (optionalVehicle.isPresent()) {
-            return optionalVehicle.get();
-        } else {
-            return null;
-        }
-		
+		Optional<Vehicles> optionalVehicle = vr.findById(vid);
+		if (optionalVehicle.isPresent()) {
+			return optionalVehicle.get();
+		} else {
+			return null;
+		}
+
 	}
 
 	@Override
 	public void updateVehicle(Vehicles vehicle) {
 		vr.save(vehicle);
-		
+
 	}
-	
 
 }
-
-
-
-//	@Override
-//	public CabFares SearchFare(int cid) {
-//		Optional<CabFares> c=cr.findById(cid);
-//		
-//		if(c.isPresent())
-//			return c.get();//return c object
-//		return null;
-//	}
-//
-
-//
-//}

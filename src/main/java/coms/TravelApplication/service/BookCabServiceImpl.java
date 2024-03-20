@@ -2,32 +2,29 @@ package coms.TravelApplication.service;
 
 import java.util.List;
 
-
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-
 
 import coms.TravelApplication.Repo.BookCabRepository;
 import coms.TravelApplication.entities.BookCab;
 import coms.TravelApplication.entities.CabFares;
 
 @Service
-public class BookCabServiceImpl implements BookCabService{
+public class BookCabServiceImpl implements BookCabService {
 
 	@Autowired
 	BookCabRepository br;
-	
+
 	@Override
 	public String addBookCab(BookCab bookCab) {
-		
+
 		try {
 			br.save(bookCab);
 			return "Success";
-			
-		}catch (Exception e){
+
+		} catch (Exception e) {
 			e.printStackTrace();
 			return "Error";
 		}
@@ -42,7 +39,7 @@ public class BookCabServiceImpl implements BookCabService{
 	@Override
 	public void deleteBookCab(int bid) {
 		br.deleteById(bid);
-		
+
 	}
 
 //	@Override
@@ -62,16 +59,4 @@ public class BookCabServiceImpl implements BookCabService{
 		return br.findByCustomerId(customerId);
 	}
 
-//	@Override
-//	public List<BookCab> getBookingByCustomerId(int customerId) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-
-	
-
-	
-
-	
-	
 }

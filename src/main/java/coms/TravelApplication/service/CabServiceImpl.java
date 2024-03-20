@@ -7,7 +7,6 @@ import java.util.List;
 //import java.util.Map;
 import java.util.Optional;
 
-
 //import org.hibernate.sql.results.ResultsLogger_.logger;
 //import org.hibernate.boot.jaxb.JaxbLogger_.logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,79 +18,52 @@ import jakarta.persistence.EntityManager;
 
 import jakarta.persistence.PersistenceContext;
 
-
-
 @Service
-public class CabServiceImpl implements CabFareService{
-	
-	 @PersistenceContext
-	   private EntityManager entityManager; 
-	 
+public class CabServiceImpl implements CabFareService {
+
+	@PersistenceContext
+	private EntityManager entityManager;
+
 	@Autowired
 	CabFareRepository cr;
 
 	@Override
 	public String AddFare(CabFares cabfare) {
-		
-		CabFares c=cr.save(cabfare);//save into db
-		if(c!=null)
+
+		CabFares c = cr.save(cabfare);// save into db
+		if (c != null)
 			return "Success";
 		return "Err";
 	}
 
 	@Override
 	public List<CabFares> FareAll() {
-		
-		List<CabFares> cablist=cr.findAll();
-		
+
+		List<CabFares> cablist = cr.findAll();
+
 		return cablist;
 	}
-
 
 	@Override
 	public void DeleteFare(int cid) {
 		cr.deleteById(cid);
-		
+
 	}
 
 	@Override
 	public CabFares getFareById(int cid) {
-		 Optional<CabFares> optionalCabFare = cr.findById(cid);
-	        if (optionalCabFare.isPresent()) {
-	            return optionalCabFare.get();
-	        } else {
-	            return null;
-	        }
+		Optional<CabFares> optionalCabFare = cr.findById(cid);
+		if (optionalCabFare.isPresent()) {
+			return optionalCabFare.get();
+		} else {
+			return null;
+		}
 	}
 
 	@Override
 	public void updateFare(CabFares cabfare) {
 		cr.save(cabfare);
-		
+
 	}
 
-//	 @Override
-//	    public int findFareByFromLocationAndToLocation(String fromloc, String toloc) {
-//	        // Assuming your repository method is named findFareByFromLocationAndToLocation
-//	        return cr.findFareByFromLocationAndToLocation(fromloc, toloc);
-//	    }
-
-	
-
-	
-
-//	@Override
-//	public int getFareByLocations(String fromloc, String toloc) {
-//		CabFares cabFare =cr.findByFromlocAndToloc(fromloc, toloc);
-//		if(cabFare!=null) {
-//			return cabFare.getFare();
-//		}else {
-//		return 0;
-//	}
-	 //private static final Logger logger = LoggerFactory.getLogger(CabServiceImpl.class);
-	  
-	
-	}
-
-
-	
+}

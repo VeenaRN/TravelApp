@@ -19,7 +19,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-
 import coms.TravelApplication.Repo.CabFareRepository;
 import coms.TravelApplication.entities.BookCab;
 import coms.TravelApplication.entities.CabFares;
@@ -33,76 +32,53 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class BookCabController {
-	
+
 	@Autowired
 	BookCabService bs;
-	
-	 @Autowired
-	  CabFareService cs;
-	 
-	 @Autowired
-	  CustomerService customerservice;;
-	 
-	 @Autowired
-	 CabFareRepository cr;
-	 
-	 @Autowired
-	 VehicleService vs;
 
-		
-	
+	@Autowired
+	CabFareService cs;
+
+	@Autowired
+	CustomerService customerservice;;
+
+	@Autowired
+	CabFareRepository cr;
+
+	@Autowired
+	VehicleService vs;
+
 	@GetMapping("/addBookCab")
-    public String showAddBookCabForm(Model m) {
-        m.addAttribute("bookCab", new BookCab());
-        m.addAttribute("farelist", cs.FareAll());
-        m.addAttribute("vehicles",vs.AllVehicle());
-       
-        return "addBookCab";
-    }
+	public String showAddBookCabForm(Model m) {
+		m.addAttribute("bookCab", new BookCab());
+		m.addAttribute("farelist", cs.FareAll());
+		m.addAttribute("vehicles", vs.AllVehicle());
 
-    @PostMapping("/addBookCab")
-    public String addBookCab(@ModelAttribute BookCab bookCab,RedirectAttributes redirectAttributes) {
-    	
-    	
-        bs.addBookCab(bookCab);
-       
-        String successMessage = "Cab Booked Successfully!";
-        redirectAttributes.addFlashAttribute("successMessage", successMessage);
-        return "redirect:/addBookCab";
-    }
-    
-    
-//    @GetMapping("/bookinghistory")
-//	public String showBookingHistory(Model model, HttpSession session) {
-//		Integer customerId = (Integer) session.getAttribute("customerId");
-//		if (customerId != null) {
-//
-//			List<BookCab> addBookCab = bs.getBookingsByCustomerId(customerId);
-//			model.addAttribute("addBookCab", addBookCab);
-//			return "BookingHistory";
-//		} else {
-//
-//			return "error";
-//		}
-//	}
+		return "addBookCab";
+	}
 
+	@PostMapping("/addBookCab")
+	public String addBookCab(@ModelAttribute BookCab bookCab, RedirectAttributes redirectAttributes) {
 
-	
-    @GetMapping("/listBookCabs")
-    public String listBookCabs(Model model) {
-        List<BookCab> bookCabs = bs.listBookCabs();
-        model.addAttribute("bookCabs", bookCabs);
-        return "listBookCabs";
-    }
-    
-    @GetMapping("/deleteBookCab/{bid}")
-   public String deleteBookCab(@PathVariable int bid) {
-   	bs.deleteBookCab(bid);
-   	return "redirect:/listBookCabs";
-    
-    	
-    }
-    
+		bs.addBookCab(bookCab);
 
-    
+		String successMessage = "Cab Booked Successfully!";
+		redirectAttributes.addFlashAttribute("successMessage", successMessage);
+		return "redirect:/addBookCab";
+	}
+
+	@GetMapping("/listBookCabs")
+	public String listBookCabs(Model model) {
+		List<BookCab> bookCabs = bs.listBookCabs();
+		model.addAttribute("bookCabs", bookCabs);
+		return "listBookCabs";
+	}
+
+	@GetMapping("/deleteBookCab/{bid}")
+	public String deleteBookCab(@PathVariable int bid) {
+		bs.deleteBookCab(bid);
+		return "redirect:/listBookCabs";
+
+	}
+
 }

@@ -1,10 +1,5 @@
 package coms.TravelApplication.controller;
 
-
-
-
-
-
 import coms.TravelApplication.entities.Customer;
 
 import coms.TravelApplication.service.CustomerService;

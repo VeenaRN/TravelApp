@@ -98,7 +98,7 @@
         
          
         <label for="fromloc">From Location:</label>
-        <select id="fromloc" name="fromloc" onchange="populateToLocations()">
+        <select id="fromloc" name="fromloc" onchange="toLocations()">
             <c:forEach var="cabFare" items="${farelist}">
                 <option value="${cabFare.cid}">${cabFare.fromloc}</option> 
             </c:forEach>
@@ -127,12 +127,12 @@
 </div>
 
 <script>
-    function populateToLocations() {
+    function toLocations() {
         var fromLocId = document.getElementById("fromloc").value;
         var toLocDropdown = document.getElementById("toloc");
         toLocDropdown.innerHTML = ""; // Clear previous options
         
-        // Iterate through farelist to find matching locations
+        //  farelist iteration  to find matching locations
         <c:forEach var="cabFare" items="${farelist}">
             if (${cabFare.cid} == fromLocId) {
                 var option = document.createElement("option");
@@ -142,7 +142,7 @@
             }
         </c:forEach>
         
-        // After populating the "To Location" dropdown, update the fare dropdown
+        //  updating the fare dropdown
         updateFare();
     }
    
@@ -152,7 +152,7 @@
         var fareDropdown = document.getElementById("fare");
         fareDropdown.innerHTML = ""; // Clear previous options
         
-        // Iterate through farelist to find matching fare based on selected locations
+        //  farelist iteration  to find matching fare based on selected locations
         <c:forEach var="cabFare" items="${farelist}">
             if (${cabFare.cid} == fromLocId && ${cabFare.cid} == toLocId) {
                 var option = document.createElement("option");

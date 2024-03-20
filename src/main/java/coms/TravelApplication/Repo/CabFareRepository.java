@@ -10,7 +10,7 @@ import coms.TravelApplication.entities.CabFares;
 
 @Repository
 public interface CabFareRepository extends JpaRepository<CabFares,Integer>{
-	 //boolean existsByPickupLocationAndDropoffLocation(CabFares cabFares, CabFares cabFares2);
+	 
 	 
 	
 

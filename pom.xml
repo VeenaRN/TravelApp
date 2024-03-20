@@ -59,7 +59,8 @@
   		<groupId>org.apache.tomcat.embed</groupId>
   		<artifactId>tomcat-embed-jasper</artifactId>
   		<scope>provided</scope>
-	</dependency>	
+	</dependency>
+		
 	<dependency>
   		<groupId>jakarta.servlet.jsp.jstl</groupId>
   		<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
@@ -71,10 +72,6 @@
 	  <artifactId>jakarta.servlet.jsp.jstl</artifactId>
 	  <version>3.0.1</version>
 	</dependency>
-	
-	
-	
-	
 	
 	</dependencies>
 
@@ -90,6 +87,8 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		
+		<finalName>spring-boot-docker</finalName>
 	</build>
 
 </project>

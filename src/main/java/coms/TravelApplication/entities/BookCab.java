@@ -2,7 +2,6 @@ package coms.TravelApplication.entities;
 
 import java.time.LocalDate;
 
-
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -15,34 +14,34 @@ import jakarta.persistence.ManyToOne;
 
 @Entity
 public class BookCab {
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int bid;
-	
+
 	private Integer customerId;
-	
+
 	private String date;
-	
+
 	@ManyToOne
-	@JoinColumn(name="from_id", referencedColumnName="cid")
-	@OnDelete(action=OnDeleteAction.CASCADE)
+	@JoinColumn(name = "from_id", referencedColumnName = "cid")
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	private CabFares fromloc;
-	
+
 	@ManyToOne
-	@JoinColumn(name="to_id",referencedColumnName="cid")
-	@OnDelete(action=OnDeleteAction.CASCADE)
+	@JoinColumn(name = "to_id", referencedColumnName = "cid")
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	private CabFares toloc;
-	
+
 	@ManyToOne
-	@JoinColumn(name="vehicle_num",referencedColumnName="vid")
-	@OnDelete(action=OnDeleteAction.CASCADE)
+	@JoinColumn(name = "vehicle_num", referencedColumnName = "vid")
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	private Vehicles vno;
-	
+
 	private String custname;
-	
+
 	private int phone;
-	
+
 	private int fare;
 
 	public int getFare() {
@@ -109,12 +108,7 @@ public class BookCab {
 		this.phone = phone;
 	}
 
-//	@Override
-//	public String toString() {
-//		return" + fromloc + ";
-//	}
-
-public Integer getCustomerId() {
+	public Integer getCustomerId() {
 		return customerId;
 	}
 
@@ -122,18 +116,12 @@ public Integer getCustomerId() {
 		this.customerId = customerId;
 	}
 
-	//	@Override
-//	public String toString() {
-//		return "BookCab [fromloc=" + fromloc + ", toloc=" + toloc + "]";
-//	}
 	@Override
 	public String toString() {
-		//return "[" + fromloc + ", " + toloc + "]";
-		 return "Cab is booked from " + fromloc + " to " + toloc + " successfully.";
-		//return fromloc ;
+		// return "[" + fromloc + ", " + toloc + "]";
+		return "Cab is booked from " + fromloc + " to " + toloc + " successfully.";
+		// return fromloc ;
 	}
 //	
-	
-	
 
 }
