@@ -1,0 +1,17 @@
+package coms.TravelApplication.controller;
+
+public class TestClass {
+	
+//	
+//	Vehicle v1 = new Vehicle();
+//
+//	Vehicle v2 = new Vehicle();
+//
+//	Vehicle v3 = v1;
+	
+	
+	Vehicle v1 = new Vehicle();//car
+	Vehicle v2 = new Vehicle();//bus
+	v2 = v1;
+
+}

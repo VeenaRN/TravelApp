@@ -1,0 +1,67 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<%@ taglib prefix="frm" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>New Fare</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        background-color: black; /* Set background color */
+    }
+    .container {
+        background-color: #ffffff; /* Set background color */
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+        max-width: 50%; /* Set maximum width */
+        margin: 0 auto; /* Center horizontally */
+    }
+    .form-header {
+        color: black; /* Set color of the header */
+        background-color: #f5f2c5; /* Set background color of the header */
+        padding: 10px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+   a.button {
+        display: block;
+        width: fit-content;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #225e39;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<jsp:include page="adminlinks.jsp"/>
+<hr />
+
+<div class="container">
+    <h1 class="form-header mb-4 text-center">New Fare</h1>
+    <hr/>
+
+    <frm:form method="post" action="newfareinfo" modelAttribute="fare"> 
+        <label>From:</label>
+        <frm:input class="form-control" type="text" path="fromloc" placeholder="From" />
+        <br /><br />
+        <label>To:</label>
+        <frm:input class="form-control" type="text" path="toloc" placeholder="To" />
+        <br /><br />
+
+        <label>Fare:</label>
+        <frm:input class="form-control" type="text" path="fare" placeholder="Fare" />
+        <br /><br />
+        <div class ="button">
+        <input type="submit"  value="Add Fare" />
+        </div>
+    </frm:form>
+</div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+org.eclipse.debug.core.USE_STEP_FILTERS=true
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n    <expression enabled\="true" text\="transactions[0]"/>\r\n    <expression enabled\="true" text\="transactions"/>\r\n    <expression enabled\="true" text\="transactions[90]"/>\r\n    <expression enabled\="true" text\="e"/>\r\n    <expression enabled\="true" text\="catch"/>\r\n    <expression enabled\="true" text\="inscmd"/>\r\n</watchExpressions>\r\n

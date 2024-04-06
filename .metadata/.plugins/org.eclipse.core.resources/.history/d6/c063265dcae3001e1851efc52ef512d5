@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<%@ taglib prefix="frm" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>New Fare</title>
+</head>
+<body>
+<jsp:include page="adminlinks.jsp"/>
+<hr />
+
+<div class="container">
+    <h1>New Fare</h1>
+    <hr/>
+
+    <frm:form method="post" action="newfareinfo" modelAttribute="fare"> 
+        <label>From:</label>
+        <frm:input type="text" path="fromloc" placeholder="From" />
+        <br /><br />
+        <label>To:</label>
+        <frm:input type="text" path="toloc" placeholder="To" />
+        <br /><br />
+
+        <label>Fare:</label>
+        <frm:input type="text" path="fare" placeholder="Fare" />
+        <br /><br />
+        <input type="submit" value="Add Fare" />
+    </frm:form>
+
+    <div>
+        <a href="newfare">New Fare</a>
+    </div>
+</div>
+</body>
+</html>

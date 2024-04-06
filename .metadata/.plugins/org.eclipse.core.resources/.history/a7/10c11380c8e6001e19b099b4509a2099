@@ -1,0 +1,8 @@
+spring.application.name=demoapplication
+
+spring.datasource.url=jdbc:mysql://tesladb
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.username=root
+spring.datasource.password=Veen@1234567
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect

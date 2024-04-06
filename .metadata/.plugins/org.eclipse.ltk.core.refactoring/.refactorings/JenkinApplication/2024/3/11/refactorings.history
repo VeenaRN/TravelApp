@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;JenkinApplication/src/main/webapp/Page3jsp.jsp&apos; to &apos;Page3.jsp&apos;" description="Rename resource &apos;Page3jsp.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/Page3jsp.jsp" name="Page3.jsp" stamp="1710268118283" updateReferences="true"/>
+</session>

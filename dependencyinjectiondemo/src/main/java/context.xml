@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="aref" class="com.example.dependencyinjectiondemo.bean.Address">
+		<property name="adrsLine" value ="2112 street B"/>
+		<property name="city" value ="Bailur"/>
+		<property name="state" value ="Karnataka"/>
+		<property name="zipcode" value ="1234"/>
+	</bean>
+
+	<bean id="rRef" class="com.example.dependencyinjectiondemo.bean.Restaurant">
+		<property name="name" value ="jcharcoal"/>
+		<property name="phone" value ="1234567"/>
+		<property name="operatingHours" value ="10.00 to 12"/>
+		<property name="rating" value ="5"/>
+		<property name="address" ref="aref"/>
+	</bean>
+
+	<!-- more bean definitions go here -->
+
+</beans>

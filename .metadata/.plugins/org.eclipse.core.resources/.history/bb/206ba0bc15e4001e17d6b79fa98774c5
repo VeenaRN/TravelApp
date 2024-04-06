@@ -1,0 +1,97 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>All Vehicles</title>
+<style>
+    body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        width: 80%;
+        margin: 20px auto;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #e0e1b8;
+        color: #fff;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    tr:hover {
+        background-color: #ddd;
+    }
+    .add-button {
+        display: block;
+        width: fit-content;
+        padding: 10px 20px;
+        text-align: center;
+        margin:20px;
+        background-color: #1e5f35;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+   
+    .add-button:hover {
+        background-color: #179434;
+    }
+</style>
+</head>
+<body>
+<jsp:include page="adminlinks.jsp"/>
+<hr />
+<div class="container">
+    <h1>All Vehicles</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Vehicle Id</th>
+                <th>Vehicle Name</th>
+                <th>Vehicle Number</th>
+                <th>Owner Name</th>
+                <th>Seating</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <c:forEach var="vehicle" items="${vehiclelist}">
+                <tr>
+                    <td>${vehicle.vid}</td>
+                    <td>${vehicle.name}</td>
+                    <td>${vehicle.number}</td>
+                    <td>${vehicle.ownname}</td>
+                    <td>${vehicle.seating}</td>
+                    <td>
+                        <a href="delvehicle/${vehicle.vid}">Delete</a>
+                        <a href="editvehicle/${vehicle.vid}">Edit</a>
+                    </td>
+                </tr>
+            </c:forEach>
+        </tbody>
+    </table>
+    <a href="#" class="add-button">Add Vehicle</a>
+</div>
+</body>
+</html>

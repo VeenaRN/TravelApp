@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Javas\dependencyinjectiondemo\src\main\java\context.xml"/>
+			<item value="C:\Javas\jadbJDBC\src\main\java\com\app\EmployeeDao.java"/>
+			<item value="C:\Javas\SpringFirstApp\src\main\java\coms\beans\Address.java"/>
+			<item value="C:\Users\Administrator\Desktop\JDBC\SpringBootJDBCExample-master\src\main\java\org\arpit\java2blog\SpringBootJdbcExampleApplication.java"/>
+			<item value="C:\Javas\SpringFirstApp\pom.xml"/>
+			<item value="C:\Javas\SpringFirstApp\src\main\java\coms\beans\Snippet.java"/>
+			<item value="C:\Javas\SpringFirstApp\src\main\resources\ConfigEmp.xml"/>
+			<item value="C:\Javas\DesignPatterns\src\main\java\coms\FactoryMethod\PlanFactory.java"/>
+			<item value="C:\Javas\JunitApp\src\test\java\com\testing\ParametersForMin.java"/>
+			<item value="C:\Javas\SampleApplication"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="coms.JenkinApplication"/>
+			<item value="coms.TriconWebApp"/>
+			<item value="coms.SpringWebMVC"/>
+		</list>
+		<list key="groupId">
+			<item value="coms"/>
+		</list>
+		<list key="artifactId">
+			<item value="JenkinApplication"/>
+			<item value="TriconWebApp"/>
+			<item value="SpringWebMVC"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenModuleWizardParentPage">
+		<list key="moduleName">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\Administrator\Desktop\Demo User Management"/>
+			<item value="C:\Javas\estore"/>
+			<item value="C:\Javas\UserManagement"/>
+			<item value="C:\Users\Administrator\Desktop\New"/>
+			<item value="C:\Users\Administrator\Desktop\JDBC"/>
+			<item value="C:\Users\Administrator\Downloads\SpringBootJDBCExample-master.zip\SpringBootJDBCExample-master"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="demoapp"/>
+			<item value="demo"/>
+			<item value="CourseManagement"/>
+			<item value="Funfit"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="demoapp"/>
+			<item value="demo"/>
+			<item value="CourseManagement"/>
+			<item value="Funfit"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

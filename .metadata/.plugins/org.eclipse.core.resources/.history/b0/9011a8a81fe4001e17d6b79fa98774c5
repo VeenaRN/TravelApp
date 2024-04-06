@@ -1,0 +1,64 @@
+ <%@ page language="java" contentType="text/html; charset=ISO-8859-1" 
+pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="frm" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>List Book Cabs</title>
+<style>
+    table {
+        border-collapse: collapse; /* This ensures that the borders are not doubled */
+        width: 100%; /* Full width table */
+    }
+    th, td {
+        border: 1px solid #ddd; /* Add borders to table headers and cells */
+        padding: 8px; /* Add some padding */
+        text-align: left; /* Align text to the left */
+    }
+    th {
+        background-color: #f2f2f2; /* Add a background color to the table headers */
+        color: black; /* Change the text color */
+    }
+</style>
+</head>
+<body>
+<jsp:include page="adminlinks.jsp"/>
+<hr />
+    <h1>List Book Cabs</h1>
+    <hr/>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Customer Name</th>
+            <th>Phone</th>
+          
+            <th>From Location</th>
+            <th>To Location</th>
+             <th>Fare</th>
+            <th>Vehicle Name</th>
+            <th>  </th>
+        </tr>
+        <c:forEach var="bookCab" items="${bookCabs}">
+            <tr>
+                <td>${bookCab.bid}</td>
+                <td>${bookCab.date}</td>
+                <td>${bookCab.custname}</td>
+                <td>${bookCab.phone}</td>
+               
+                <td>${bookCab.fromloc.fromloc}</td> <!-- Assuming CabFares has a locationName property -->
+                <td>${bookCab.toloc.toloc}</td> <!-- Assuming CabFares has a locationName property -->
+                 <td>${bookCab.fare}</td>
+                <td>${bookCab.vno.name}</td> <!-- Assuming Vehicles has a vehicleNumber property -->
+              <td>
+    <a href="${pageContext.request.contextPath}/deleteBookCab/${bookCab.bid}">Delete</a>
+</td>
+              
+            </tr>
+        </c:forEach>
+    </table>
+</body>
+</html>
+ 

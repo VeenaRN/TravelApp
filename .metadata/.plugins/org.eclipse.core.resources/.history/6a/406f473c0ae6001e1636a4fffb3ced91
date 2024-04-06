@@ -1,0 +1,21 @@
+
+
+#MySQL Database Config
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://travelapplication.crm2eigy6er6.ap-south-1.rds.amazonaws.com:3306/tesladb
+spring.datasource.username=awsuser
+spring.datasource.password=Veen@1234567
+
+#H2Db Configurations
+#spring.datasource.url=jdbc:h2:mem:testdb
+#spring.datasource.driverClassName=org.h2.Driver
+#spring.datasource.username=sa
+#spring.datasource.password=
+#spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+#spring.h2.console.enabled=true
+
+#spring data jpa Configurations
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+
+#http://localhost:8089/api/person/v1/person
